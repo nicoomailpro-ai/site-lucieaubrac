@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lucie Aubrac</title>
+    <style>
+        @font-face {
+            font-family: 'Lemon Milk';
+            src: url('lemonmilkBold.otf');
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #2c2c2c;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+            font-family: 'Lemon Milk', Arial, sans-serif;
+        }
+
+        nav button {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        nav button:hover {
+            background-color: #666;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+        }
+
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .photo {
+            width: 220px;
+            margin: 15px 0;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2c2c2c;
+            color: white;
+            margin-top: 40px;
+            font-family: 'Lemon Milk', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>L'histoire de Lucie Aubrac</h1>
+    <nav>
+        <button onclick="showPage('presentation')">Présentation</button>
+        <button onclick="showPage('histoire')">Histoire</button>
+        <button onclick="showPage('engagement')">Engagement politique</button>
+    </nav>
+</header>
+
+<main>
+    <section id="presentation" class="active">
+        <h2>Présentation</h2>
+        <img src="lucieaubrac.png" alt="Lucie Aubrac" class="photo">
+        <ul>
+            <li><strong>Nom :</strong> Aubrac</li>
+            <li><strong>Prénom :</strong> Lucie</li>
+            <li><strong>Nom de naissance :</strong> Lucie Bernard</li>
+            <li><strong>Date de naissance :</strong> 29 juin 1912</li>
+            <li><strong>Lieu de naissance :</strong> Paris (14e arrondissement)</li>
+            <li><strong>Date de décès :</strong> 14 mars 2007</li>
+            <li><strong>Lieu de décès :</strong> Hôpital suisse de Paris</li>
+            <li><strong>Sépulture :</strong> Cimetière de Salornay-sur-Guye</li>
+            <li><strong>Nationalité :</strong> Française</li>
+            <li><strong>Professions :</strong> Enseignante, résistante</li>
+            <li><strong>Conjoint :</strong> Raymond Aubrac</li>
+        </ul>
+        <img src="tombelucieaubrac.png" alt="Tombe de Lucie Aubrac" class="photo">
+    </section>
+
+    <section id="histoire">
+        <h2>Histoire</h2>
+        <img src="2page.png" alt="Image histoire" style="width:260px; float:right; margin-left:20px;">
+        <p>
+            Lucie Aubrac, née Lucie Bernard en 1912 à Paris, grandit dans un milieu modeste. Très jeune, elle se montre
+            brillante à l’école et s’oriente vers des études supérieures. Elle devient professeure agrégée
+            d’histoire-géographie, un métier qu’elle exercera avec passion.
+        </p>
+        <p>
+            En 1939, elle épouse Raymond Aubrac. Lorsque la Seconde Guerre mondiale éclate et que la France est
+            occupée par l’Allemagne nazie, Lucie refuse la soumission. Le couple s’installe à Lyon et entre très
+            rapidement dans la Résistance.
+        </p>
+        <p>
+            Lucie Aubrac participe à la création du mouvement Libération-Sud. Elle joue un rôle essentiel dans la
+            diffusion de tracts, la transmission de messages, le recrutement de résistants et l’organisation
+            d’actions clandestines, souvent très dangereuses.
+        </p>
+        <p>
+            Elle est particulièrement connue pour son courage et son sang-froid, notamment lorsqu’elle organise
+            l’évasion de son mari Raymond et de plusieurs autres résistants emprisonnés par la Gestapo en 1943.
+            Cet acte reste l’un des épisodes les plus marquants de la Résistance française.
+        </p>
+        <div style="clear:both"></div>
+    </section>
+
+    <section id="engagement">
+        <h2>Engagement politique</h2>
+        <img src="3page.png" alt="Image engagement politique" style="width:260px; float:right; margin-left:20px;">
+        <p>
+            L’engagement politique de Lucie Aubrac commence dès sa jeunesse. Dans les années 1930, elle adhère aux
+            Jeunesses communistes, attirée par les idées de justice sociale, de solidarité et de lutte contre le
+            fascisme.
+        </p>
+        <p>
+            Pendant la Seconde Guerre mondiale, ses convictions politiques se traduisent par un engagement total
+            dans la Résistance. Elle lutte activement contre l’occupation allemande et le régime de Vichy, au péril
+            de sa vie. Son action ne se limite pas aux idées : elle agit concrètement sur le terrain.
+        </p>
+        <p>
+            Après la guerre, Lucie Aubrac continue à défendre ses valeurs. Elle témoigne de son expérience auprès
+            des jeunes générations afin de transmettre la mémoire de la Résistance et rappeler l’importance de la
+            liberté, du courage et de l’engagement citoyen dans une démocratie.
+        </p>
+        <div style="clear:both"></div>
+    </section>
+</main>
+
+<footer>
+    <p>Travail DELPLACE Nicolas - Corbel Noa</p>
+</footer>
+
+<script>
+    function showPage(pageId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => section.classList.remove('active'));
+        document.getElementById(pageId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
